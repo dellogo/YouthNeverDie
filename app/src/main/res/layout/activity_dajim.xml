@@ -1,0 +1,165 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dagim_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:gravity="fill_vertical"
+    android:orientation="vertical">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/select_date"
+            android:gravity="center"
+            android:text=""
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/modu_bold"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+        <TextView
+            android:id="@+id/today_target"
+            android:layout_width="190dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/round_button"
+            android:fontFamily="@font/modu_bold"
+            android:padding="10dp"
+            android:text="오늘의 목표"
+            android:textColor="@color/dark_gray"
+            android:textSize="22dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <ListView
+            android:id="@+id/today_target_text"
+            android:padding="5dp"
+            android:layout_width="190dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/modu_bold"
+            android:gravity="left"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:layout_alignTop="@id/today_target"
+            android:layout_alignRight="@id/today_target"
+            android:layout_marginTop="35dp"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/today_write"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_pen"
+            android:layout_alignTop="@id/today_target"
+            android:layout_alignRight="@id/today_target"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/term_target"
+            android:layout_width="190dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/round_button"
+            android:fontFamily="@font/modu_bold"
+            android:padding="10dp"
+            android:text="진행중인 목표"
+            android:textColor="@color/dark_gray"
+            android:layout_alignParentRight="true"
+            android:textSize="22dp"
+            tools:ignore="MissingConstraints" />
+
+        <ListView
+            android:id="@+id/term_target_text"
+            android:padding="5dp"
+            android:layout_width="190dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/modu_bold"
+            android:layout_alignRight="@id/term_target"
+            android:gravity="left"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/term_write"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_pen"
+            android:background="@color/white"
+            android:layout_alignTop="@id/term_target"
+            android:layout_alignRight="@id/term_target"
+            tools:ignore="MissingConstraints" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5">
+
+        <TextView
+            android:id="@+id/feedback_today"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/round_button"
+            android:fontFamily="@font/modu_bold"
+            android:padding="10dp"
+            android:text="오늘의 나에게"
+            android:textColor="@color/dark_gray"
+            android:textSize="22dp" />
+
+        <ListView
+            android:id="@+id/feedback_text_list"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="@color/dark_gray"
+            android:fontFamily="@font/modu_bold"
+            android:gravity="left"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:layout_alignTop="@id/feedback_today"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/feedback_write"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_pen"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            tools:ignore="MissingConstraints" />
+    </RelativeLayout>
+</LinearLayout>

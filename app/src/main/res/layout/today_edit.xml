@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:padding="20dp"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:background="@drawable/round_button"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오늘의 목표"
+            android:textColor="@color/dark_gray"
+            android:textSize="20dp"
+            android:fontFamily="@font/modu_bold" />
+        <EditText
+            android:id="@+id/today_target_edit_edit"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:fontFamily="@font/modu_bold"/>
+        <Button
+            android:id="@+id/today_target_edit_finish_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_write_button"
+            android:layout_marginTop="30dp"
+            android:text="수정 완료"
+            android:textSize="15dp"
+            android:fontFamily="@font/modu_bold"/>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/today_target_delete_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:background="@color/white"
+        android:fontFamily="@font/modu_bold"
+        android:src="@drawable/ic_trash" />
+</RelativeLayout>

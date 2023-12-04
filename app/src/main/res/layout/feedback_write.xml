@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:padding="20dp"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:background="@drawable/round_button"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오늘의 나에게"
+            android:textColor="@color/dark_gray"
+            android:textSize="20dp"
+            android:fontFamily="@font/modu_bold" />
+        <EditText
+            android:id="@+id/feedback_edit"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:fontFamily="@font/modu_bold"/>
+        <Button
+            android:id="@+id/feedback_finish_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_write_button"
+            android:layout_marginTop="30dp"
+            android:text="작성 완료"
+            android:textSize="15dp"
+            android:fontFamily="@font/modu_bold"/>
+    </LinearLayout>
+</RelativeLayout>

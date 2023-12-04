@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="select_posting">
+        <item>게시판 선택</item>
+        <item>취업 게시판</item>
+        <item>자격증 게시판</item>
+    </string-array>
+    <string-array name="license_event">
+        <item>종목 선택</item>
+<!--        <item>
+            <descrption></descrption>
+        </item>-->
+        <item>기술사 시험 시행일정 조회</item>
+        <item>기능장 시험 시행일정 조회</item>
+        <item>기사, 산업기사 시험 시행일정 조회</item>
+        <item>기능사 시험 시행일정 조회</item>
+    </string-array>
+    <string-array name="license_event_detail">
+        <item>과목 선택</item>
+        <item>정보처리기사</item>
+        <item>머시기</item>
+    </string-array>
+</resources>

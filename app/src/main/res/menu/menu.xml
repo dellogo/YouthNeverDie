@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="홈" />
+    <item android:id="@+id/open_book"
+        android:enabled="true"
+        android:icon="@drawable/ic_openbook"
+        android:title="다짐" />
+    <item android:id="@+id/community"
+        android:enabled="true"
+        android:icon="@drawable/ic_community3"
+        android:title="커뮤니티" />
+    <item android:id="@+id/setting"
+        android:enabled="true"
+        android:icon="@drawable/ic_user"
+        android:title="내 정보" />
+</menu>

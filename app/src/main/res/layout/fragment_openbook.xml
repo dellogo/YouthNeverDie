@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/openbook_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/gray"
+    tools:context=".fragment.OpenbookFragment">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/select_date_openbook"
+        android:visibility="invisible"
+        android:text="선택된 날짜"
+        android:textSize="0dp"/>
+    <CalendarView
+        android:id="@+id/calendar"
+        android:layout_width="396dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_button"
+        />
+    <RelativeLayout
+        android:id="@+id/godajim_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:id="@+id/today_target"
+            android:layout_width="190dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:gravity="left"
+            android:text="오늘의 목표"
+            android:fontFamily="@font/modu_bold"
+            android:textSize="22dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/round_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="8dp"
+            tools:ignore="MissingConstraints" />
+        <ListView
+            android:id="@+id/openbook_today_list"
+            android:padding="5dp"
+            android:layout_width="190dp"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@id/today_target"
+            android:layout_alignRight="@id/today_target"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="35dp"/>
+        <TextView
+            android:id="@+id/term_target"
+            android:layout_width="190dp"
+            android:layout_height="match_parent"
+            android:gravity="left"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/round_button"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="8dp"
+            android:text="진행중인 목표"
+            android:fontFamily="@font/modu_bold"
+            android:textSize="22dp"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:ignore="MissingConstraints" />
+        <ListView
+            android:id="@+id/openbook_term_list"
+            android:padding="5dp"
+            android:layout_width="190dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_alignTop="@id/term_target"
+            android:layout_alignRight="@id/term_target"
+            android:layout_marginTop="35dp"/>
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/go_dagim_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_pen"
+            android:background="@drawable/dagim_round_button"/>
+    </RelativeLayout>
+</LinearLayout>
