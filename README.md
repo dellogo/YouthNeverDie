@@ -41,7 +41,6 @@
 
 ## **🔎 기능 구현**
 ### **구현사항(PPT)**
-
 ![image](https://github.com/dellogo/YouthNeverDie/assets/93125060/733ccd30-a58a-4335-964c-0828772d3493)
 ![image](https://github.com/dellogo/YouthNeverDie/assets/93125060/91110ac3-eb88-43b2-a54a-63616f0769b0)
 ![image](https://github.com/dellogo/YouthNeverDie/assets/93125060/64fdbe89-0607-4ce2-bb8f-213862bdc31c)
