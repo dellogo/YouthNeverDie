@@ -1,10 +1,47 @@
-# YouthNeverDie
-취업준비생들을 위한 어플리케이션
+![header](https://capsule-render.vercel.app/api?type=venom&color=auto&height=150&section=header&text=YouthNeverDie&fontSize=70)
 
-![image](https://github.com/dellogo/YouthNeverDie/assets/93125060/9ec06d08-05d7-4d73-89ae-e48e4dc98250)
-![image](https://github.com/dellogo/YouthNeverDie/assets/93125060/a5a50d42-5b30-490d-a203-d92de2cee877)
-![image](https://github.com/dellogo/YouthNeverDie/assets/93125060/8ecee770-2e8a-4b27-b028-92065fbdc273)
-![image](https://github.com/dellogo/YouthNeverDie/assets/93125060/451e8e35-c120-48cf-8be8-02d3c5375d33)
+## **📖 목차**
+
+<b>
+  
+- 📝 [개요](#-포트폴리오-개요)
+- ⚒️ [기술 및 도구](#-기술-및-도구)
+- 📃 [작품 배경 및 소개](#-작품-배경-및-소개)
+- 🔎 [기능 구현](#-기능-구현)
+</b>
+
+---
+
+## **📝 포트폴리오 개요**
+
+  > 프로젝트: Youth Never Die(취준생은 죽지 않아요)
+  >
+  > 기획 및 제작: 홍서영, 이상수
+  >
+  > 분류: 팀 프로젝트
+  >
+  > 주요 기능: 홈 화면(취업 준비생에게 도움이 되는 정보 제공), 다짐 화면(취업 준비 기간 동안의 목표와 과정 기록), 커뮤니티 화면(취업 준비생들 간의 취업 관련 정보 공유), 내 정보 화면(회원탈퇴, 로그아웃, 비밀번호 변경)
+  >
+  > 사용 기술: Kotlin, Android Studio, Firebase 
+  >
+  > 문의: young_laon@naver.com 
+
+## **⚒️ 기술 및 도구**
+
+![Kotlin](https://img.shields.io/badge/Kotlin-0095D5?&style=for-the-badge&logo=kotlin&logoColor=white) ![Android Studio](https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white) ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white) ![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+
+## **📃 작품 배경 및 소개**
+> ### 작품 배경
+> 
+> “취업 준비생”이 자신의 취업 준비 내용을 기록하며 목표를 세우는 것을 돕고<br>같은 목표를 가진 사람들이 함께 나아갈 수 있도록 응원하고자 제작을 결심하게 되었습니다.
+
+> ### 작품 소개
+> 
+>  Q-NET 자격증 API를 이용한 취업 준비생에게 도움이 되는 정보 제공,<br>취업 준비 기간 동안의 목표와 과정 기록, 취업 준비생들 간의 취업 관련 정보 공유 목적의 커뮤니티 기능을 구현하였습니다.
+
+## **🔎 기능 구현**
+### **구현사항(PPT)**
+
 ![image](https://github.com/dellogo/YouthNeverDie/assets/93125060/733ccd30-a58a-4335-964c-0828772d3493)
 ![image](https://github.com/dellogo/YouthNeverDie/assets/93125060/91110ac3-eb88-43b2-a54a-63616f0769b0)
 ![image](https://github.com/dellogo/YouthNeverDie/assets/93125060/64fdbe89-0607-4ce2-bb8f-213862bdc31c)
