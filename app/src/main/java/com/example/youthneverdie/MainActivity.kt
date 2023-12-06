@@ -44,7 +44,7 @@ class StartActivity : AppCompatActivity() {
             val intent= Intent( this,LoginActivity::class.java)
             startActivity(intent)
             finish()
-        }, 2000) // 시간 2초 이후 실행
+        }, 2000)
     }
 }
 
@@ -115,8 +115,6 @@ class SignUpActivity : AppCompatActivity() {
         supportActionBar?.title = "회원가입"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-
-        //이메일 검사(4.16)
         val emailValidation = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{3,})$"
 
         fun checkEmail(): Boolean{
@@ -145,78 +143,62 @@ class SignUpActivity : AppCompatActivity() {
                     binding.signupGogoBtn.isEnabled=true
                 }
             }
-        })//여기까지 이메일 검사
-        //비밀번호 체크 추가(4.16)
+        })
+
         binding.signupPwText.addTextChangedListener(object : TextWatcher {
-            //입력이 끝났을 때
-            //4. 비밀번호 일치하는지 확인
             override fun afterTextChanged(p0: Editable?) {
                 if(binding.signupPwText.getText().toString().equals(binding.signupPwCheckText.getText().toString())){
                     binding.pwCheckError.setText("비밀번호가 일치합니다.")
                     binding.pwCheckError.setTextColor(Color.parseColor("#87CEFA"))
-                    // 가입하기 버튼 활성화
                     binding.signupGogoBtn.isEnabled=true
                 }
                 else{
                     binding.pwCheckError.setText("비밀번호가 일치하지 않습니다.")
                     binding.pwCheckError.setTextColor(Color.parseColor("#D32F2F"))
-                    // 가입하기 버튼 비활성화
                     binding.signupGogoBtn.isEnabled=false
                 }
             }
-            //입력하기 전
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
             }
-            //텍스트 변화가 있을 시
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 if(binding.signupPwCheckText.getText().toString().equals(binding.signupPwText.getText().toString())){
                     binding.pwCheckError.setText("비밀번호가 일치합니다.")
                     binding.pwCheckError.setTextColor(Color.parseColor("#87CEFA"))
-                    // 가입하기 버튼 활성화
                     binding.signupGogoBtn.isEnabled=true
                 }
                 else{
                     binding.pwCheckError.setText("비밀번호가 일치하지 않습니다.")
                     binding.pwCheckError.setTextColor(Color.parseColor("#D32F2F"))
-                    // 가입하기 버튼 비활성화
                     binding.signupGogoBtn.isEnabled=false
                 }
             }
         })
         binding.signupPwCheckText.addTextChangedListener(object : TextWatcher {
-            //입력이 끝났을 때
-            //4. 비밀번호 일치하는지 확인
             override fun afterTextChanged(p0: Editable?) {
                 if(binding.signupPwText.getText().toString().equals(binding.signupPwCheckText.getText().toString())){
                     binding.pwCheckError.setText("비밀번호가 일치합니다.")
                     binding.pwCheckError.setTextColor(Color.parseColor("#87CEFA"))
-                    // 가입하기 버튼 활성화
                     binding.signupGogoBtn.isEnabled=true
                 }
                 else{
                     binding.pwCheckError.setText("비밀번호가 일치하지 않습니다.")
                     binding.pwCheckError.setTextColor(Color.parseColor("#D32F2F"))
-                    // 가입하기 버튼 비활성화
                     binding.signupGogoBtn.isEnabled=false
                 }
             }
-            //입력하기 전
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
             }
-            //텍스트 변화가 있을 시
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 if(binding.signupPwCheckText.getText().toString().equals(binding.signupPwText.getText().toString())){
                     binding.pwCheckError.setText("비밀번호가 일치합니다.")
                     binding.pwCheckError.setTextColor(Color.parseColor("#87CEFA"))
-                    // 가입하기 버튼 활성화
                     binding.signupGogoBtn.isEnabled=true
                 }
                 else{
                     binding.pwCheckError.setText("비밀번호가 일치하지 않습니다.")
                     binding.pwCheckError.setTextColor(Color.parseColor("#D32F2F"))
-                    // 가입하기 버튼 비활성화
                     binding.signupGogoBtn.isEnabled=false
                 }
             }
@@ -289,11 +271,8 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        // 페이저에 어댑터 연결
         binding.pager.adapter = FragmentAdapter(this)
 
-        // 슬라이드하여 페이지가 변경되면 바텀네비게이션의 탭도 그 페이지로 활성화
         binding.pager.registerOnPageChangeCallback(
             object : ViewPager2.OnPageChangeCallback() {
 
@@ -303,29 +282,24 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 }
             }
         )
-        // 리스너 연결
         binding.bottom.setOnNavigationItemSelectedListener(this)
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.home -> {
-                // ViewPager의 현재 item에 첫 번째 화면을 대입
                 binding.pager.currentItem = 0
                 return true
             }
             R.id.open_book -> {
-                // ViewPager의 현재 item에 두 번째 화면을 대입
                 binding.pager.currentItem = 1
                 return true
             }
             R.id.community -> {
-                // ViewPager의 현재 item에 세 번째 화면을 대입
                 binding.pager.currentItem = 2
                 return true
             }
             R.id.setting -> {
-                // ViewPager의 현재 item에 네 번째 화면을 대입
                 binding.pager.currentItem = 3
                 return true
             }

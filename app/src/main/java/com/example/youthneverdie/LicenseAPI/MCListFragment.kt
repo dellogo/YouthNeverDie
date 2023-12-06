@@ -30,7 +30,7 @@ class MCListFragment : Fragment() {
     private lateinit var binding: FragmentMCListBinding
 
     private val serviceKey =
-        "dOG7sXkHheFFUg9Xk0bk5OjyRnb4ta51bsno7uzH/su8Hql4H6i1UyHuprT6dwHXDxqeN/gwIZA0FYFR2ld1/w=="
+        ""
 
 
     override fun onCreateView(
@@ -48,7 +48,7 @@ class MCListFragment : Fragment() {
         val gson = GsonBuilder().setLenient().create()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/")
+            .baseUrl("")
             .addConverterFactory(SimpleXmlConverterFactory.create())
             .client(httpClient.build())
             .build()

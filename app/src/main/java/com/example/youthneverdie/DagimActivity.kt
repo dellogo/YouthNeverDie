@@ -181,9 +181,6 @@ class DagimActivity : AppCompatActivity() {
             val deletebtn = dialogView.findViewById<ImageButton>(R.id.today_target_delete_btn)
             val todayeditfinishbtn = dialogView.findViewById<Button>(R.id.today_target_edit_finish_btn)
 
-            Log.i(TAG, TodayKeyList[position])
-
-            // 작성 완료 버튼 눌렀을 경우
             todayeditfinishbtn.setOnClickListener {
                 val editedText = today_target_edit_edit.text.toString()
                 val selectedKey1 = TodayKeyList[position] // 선택한 항목의 키 가져오기
@@ -200,7 +197,7 @@ class DagimActivity : AppCompatActivity() {
                 TodayDataList.clear()
                 LVAdapter.notifyDataSetChanged()
             }
-            // 삭제 아이콘을 눌렀을 경우
+
             deletebtn.setOnClickListener {
                 val selectedKey1 = TodayKeyList[position] // 수정된 부분
                 FBRef.todayRef.child(selectedKey1).removeValue() // 선택한 키로 해당 항목 삭제
@@ -254,13 +251,12 @@ class DagimActivity : AppCompatActivity() {
                 ).show()
             }
 
-            // 작성 완료 버튼 눌렀을 경우
             termeditfinishbtn.setOnClickListener {
                 val editedText = term_target_edit_edit.text.toString()
                 val startDate = startDate.text.toString()
                 val finalDate = finalDate.text.toString()
 
-                val selectedKey2 = TermKeyList[position] // 선택한 항목의 키 가져오기
+                val selectedKey2 = TermKeyList[position]
 
                 FBRef.termRef.child(selectedKey2).child("content").setValue(editedText)
                 FBRef.termRef.child(selectedKey2).child("startDate").setValue(startDate)
@@ -276,7 +272,7 @@ class DagimActivity : AppCompatActivity() {
                 TermDataList.clear()
                 lvadapter.notifyDataSetChanged()
             }
-            // 삭제 아이콘을 눌렀을 경우
+
             deletebtn.setOnClickListener {
                 val selectedKey2 = TermKeyList[position] // 수정된 부분
                 FBRef.termRef.child(selectedKey2).removeValue() // 선택한 키로 해당 항목 삭제
@@ -300,7 +296,6 @@ class DagimActivity : AppCompatActivity() {
             val deletebtn = dialogView.findViewById<ImageButton>(R.id.feedback_delete_btn)
             val feedbackeditfinishbtn = dialogView.findViewById<Button>(R.id.feedback_edit_finish_btn)
 
-            // 작성 완료 버튼 눌렀을 경우
             feedbackeditfinishbtn.setOnClickListener {
                 val editedText = feedback_edit_edit.text.toString()
                 val selectedKey3 = FeedbackKeyList[position] // 선택한 항목의 키 가져오기
@@ -317,7 +312,7 @@ class DagimActivity : AppCompatActivity() {
                 FeedbackDataList.clear()
                 Lvadapter.notifyDataSetChanged()
             }
-            // 삭제 아이콘을 눌렀을 경우
+
             deletebtn.setOnClickListener {
                 val selectedKey3 = FeedbackKeyList[position] // 수정된 부분
                 FBRef.feedbackRef.child(selectedKey3).removeValue() // 선택한 키로 해당 항목 삭제
@@ -376,11 +371,9 @@ class DagimActivity : AppCompatActivity() {
                     val startDate = item?.startDate
                     val finishDate = item?.finalDate
 
-                    // 날짜 형식을 파싱하여 날짜 객체로 변환합니다.
                     val startDateObj = dateFormat.parse(startDate!!)
                     val finishDateObj = dateFormat.parse(finishDate!!)
 
-                    // 선택한 날짜가 시작일과 종료일 사이에 있는지 확인합니다.
                     if ((selectedDateObj!!.compareTo(startDateObj) >= 0 && selectedDateObj.compareTo(finishDateObj) <= 0) && user == item.uid) {
                         TermDataList.add(item)
                         TermKeyList.add(dataModel.key.toString())

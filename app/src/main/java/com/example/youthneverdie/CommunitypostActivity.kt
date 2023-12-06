@@ -31,15 +31,12 @@ class CommunitypostActivity : AppCompatActivity() {
         binding.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 when(position){
-                    //게시판 선택
                     0 -> {
 
                     }
-                    //취업 게시판
                     1 -> {
 
                     }
-                    //자격증 게시판
                     2 -> {
 
                     }

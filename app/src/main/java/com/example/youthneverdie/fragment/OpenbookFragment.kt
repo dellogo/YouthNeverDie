@@ -52,7 +52,6 @@ class OpenbookFragment : Fragment() {
 
         auth = com.google.firebase.auth.FirebaseAuth.getInstance()
 
-        // 기본 선택 날짜로 오늘 날짜 설정하기
         val currentDate = Calendar.getInstance()
         val year = currentDate.get(Calendar.YEAR)
         val month = currentDate.get(Calendar.MONTH)
